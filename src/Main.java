@@ -20,14 +20,14 @@ public class Main {
 
         // Задание 2
         System.out.println("Задача №2");
-        int maxSpending = 0;
-        int minSpending = 201_000;
+        int maxSpending = Integer.MIN_VALUE;
+        int minSpending = Integer.MAX_VALUE;
         for (int current : arr) {
             if (current > maxSpending) {
                 maxSpending = current;
             }
         }
-        System.out.println("Минимальная сумма трат за день составила " + maxSpending + " рублей.");
+        System.out.println("Максимальная сумма трат за день составила " + maxSpending + " рублей.");
         for (int current : arr) {
             if (current < minSpending) {
                 minSpending = current;
@@ -42,7 +42,7 @@ public class Main {
         for (int element : arr) {
             sum += element;
         }
-        averageSpending = sum / 30;
+        averageSpending = sum / arr.length;
         System.out.println("Средняя сумма трат за месяц составила " + averageSpending + " рублей.");
 
         // Задание 4
